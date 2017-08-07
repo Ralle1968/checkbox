@@ -18,7 +18,9 @@ export default {
   },
   methods: {
     testClick: function(){
-      console.log("Ich bin getriggert worden aus der Checkbox, Arschkopp!");
+      var x;
+      console.log("Ich bin getriggert worden aus der Checkbox, und zwar " + x + " -mal...");
+      x++;
     }
   }
 }
