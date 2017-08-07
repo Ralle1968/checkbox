@@ -13,14 +13,12 @@ export default {
   name: 'app',
   data () {
     return {
-      displayText: false
+      displayText: false,
       }
   },
   methods: {
     testClick: function(){
-      var x;
-      console.log("Ich bin getriggert worden aus der Checkbox, und zwar " + x + " -mal...");
-      x++;
+      console.log("Ich bin getriggert worden aus der Checkbox");
     }
   }
 }
