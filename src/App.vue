@@ -14,11 +14,13 @@ export default {
   data () {
     return {
       displayText: false,
+      count: 1
       }
   },
   methods: {
     testClick: function(){
-      console.log("Ich bin getriggert worden aus der Checkbox");
+      console.log("Ich bin zum "+ this.count + " mal getriggert worden aus der Checkbox ");
+      this.count++;
     }
   }
 }
