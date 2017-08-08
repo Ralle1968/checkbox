@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <label>Text anzeigen</label>
-    <input type="checkbox" value="ralf" v-model="displayText" @click="testClick"/>
+    <label v-bind:class="{ red: checked }">Text anzeigen</label>
+    <input type="checkbox" value="true" v-model="checked" @click="testClick"/>
     <div id="display">
-      <p v-if='displayText'>Thats Ralf!!!</p>
+      <p>{{ checked }}</p>
     </div>
   </div>
 </template>
@@ -13,14 +13,13 @@ export default {
   name: 'app',
   data () {
     return {
-      displayText: false,
+      checked: false,
       count: 1
       }
   },
   methods: {
     testClick: function(){
-      console.log("Ich bin zum "+ this.count + " mal getriggert worden aus der Checkbox ");
-      this.count++;
+      console.log(this.checked);
     }
   }
 }
@@ -35,6 +34,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  font-size: 20px;
 }
 
 h1, h2 {
@@ -51,7 +51,7 @@ li {
   margin: 0 10px;
 }
 
-a {
-  color: #42b983;
+.red {
+  color: red;
 }
 </style>
